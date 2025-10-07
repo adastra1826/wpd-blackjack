@@ -1,5 +1,6 @@
-export function createControlPanel() {
+(function() {
 
+    function createControlPanel() {
     console.log("[Automation] 🎰 Creating control panel");
 
     // Create host container with solid background
@@ -184,4 +185,9 @@ export function createControlPanel() {
     };
 
     console.log("[Automation] ✅ Control panel created");
-}
+    }
+
+    return {
+        createControlPanel: createControlPanel
+    }
+})();

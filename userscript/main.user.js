@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.8
+// @version      1.0.9
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -20,7 +20,7 @@
     console.log('[AUTOMATION] WPD Blackjack Automation script beginning loading');
 
     // Pick the branch to load
-    const branch = 'v1';
+    const branch = 'main';
 
     const cdnUrl = `https://cdn.jsdelivr.net/gh/adastra1826/wpd-blackjack@refs/heads/${branch}/userscript/modules/`;
     
