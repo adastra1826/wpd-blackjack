@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.10
+// @version      1.0.11
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -36,7 +36,7 @@
                 onload: (response) => {
                     if (response.status === 200) {
                         try {
-                            const wrapped = new Function('return ' + response.responseText);
+                            const wrapped = new Function(response.responseText);
                             const module = wrapped();
                             resolve(module);
                         } catch (error) {
