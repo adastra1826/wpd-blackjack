@@ -53,18 +53,19 @@
     const loadedModules = {};
 
     async function loadAllModules() {
-        for (const name of modules) {
+        for (const module of modules) {
             try {
-                loadedModules[name] = await loadModules(name);
+                const name = module.replace('.js', '');
+                loadedModules[name] = await loadModules(module);
             } catch (error) {
-                console.error(`Failed to load module: ${name}`, error);
+                console.error(`Failed to load module: ${module}`, error);
             }
         }
     }
 
     loadAllModules();
 
-    loadedModules.shadowDom.createControlPanel();
+    loadedModules['shadow-dom'].createControlPanel();
 
     console.log('[AUTOMATION] WPD Blackjack Automation script loaded');
 
