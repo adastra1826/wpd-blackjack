@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.1
+// @version      1.0.2
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -53,12 +53,11 @@
     const loadedModules = {};
 
     async function loadAllModules() {
-        for (const module of modules) {
+        for (const name of modules) {
             try {
-                const name = module.replace('.js', '');
                 loadedModules[name] = await loadModules(name);
             } catch (error) {
-                console.error(`Failed to load module: ${module}`, error);
+                console.error(`Failed to load module: ${name}`, error);
             }
         }
     }
