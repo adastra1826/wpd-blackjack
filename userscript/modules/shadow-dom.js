@@ -2,6 +2,7 @@
   function createControlPanel() {
     console.log("[Automation] 🎰 Creating control panel");
 
+    /*
     // Create host container with solid background
     const host = document.createElement("div");
     host.id = "blackjack_automation_host";
@@ -162,6 +163,7 @@
     // Get elements using shadow DOM
     const $ = (id) => root.getElementById(id);
 
+    
     // Event listeners
     $("toggle-run").addEventListener("click", toggleRun);
     $("strategy-select").addEventListener("change", (e) => {
@@ -173,6 +175,7 @@
     $("hands-input").addEventListener("change", (e) => {
       targetHands = e.target.value ? parseInt(e.target.value) : 0;
     });
+    
 
     // Store references
     window.automationElements = {
@@ -182,6 +185,7 @@
       handsEl: $("hands-count"),
       winRateEl: $("win-rate"),
     };
+    */
 
     console.log("[Automation] ✅ Control panel created");
   }
