@@ -1,5 +1,6 @@
-return {
-  createControlPanel() {
+(function() {
+  return {
+    createControlPanel() {
     // Create host container with solid background
     const host = document.createElement("div");
     host.id = "blackjack_automation_host";
@@ -182,5 +183,6 @@ return {
     };
 
     console.log("[Automation] ✅ Control panel created");
-  },
-};
+    },
+  };
+})();
