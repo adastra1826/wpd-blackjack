@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.11
+// @version      1.0.12
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -11,6 +11,7 @@
 // @grant        unsafeWindow
 // @connect      localhost
 // @connect      cdn.jsdelivr.net
+// @connect      raw.githubusercontent.com
 // @run-at       document-start
 // ==/UserScript==
 
@@ -19,10 +20,14 @@
     
     console.log('[AUTOMATION] WPD Blackjack Automation script beginning loading');
 
-    // Pick the branch to load
+    // Configuration
+    // Pick the branch and CDN to use
     const branch = 'main';
+    const useGithub = true;
 
-    const cdnUrl = `https://cdn.jsdelivr.net/gh/adastra1826/wpd-blackjack@refs/heads/${branch}/userscript/modules/`;
+    const ghUrl = `https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/${branch}/userscript/modules/`;
+    const jsDelivrUrl = `https://cdn.jsdelivr.net/gh/adastra1826/wpd-blackjack@refs/heads/${branch}/userscript/modules/`;
+    const cdnUrl = useGithub ? ghUrl : jsDelivrUrl;
     
     const modules = [
         'shadow-dom.js'
