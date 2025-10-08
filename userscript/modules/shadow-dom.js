@@ -1,8 +1,7 @@
-(function () {
-  function createControlPanel() {
-    console.log("[Automation] 🎰 Creating control panel");
+function createControlPanel() {
+  console.log("[Automation] 🎰 Creating control panel");
 
-    /*
+  /*
     // Create host container with solid background
     const host = document.createElement("div");
     host.id = "blackjack_automation_host";
@@ -187,10 +186,7 @@
     };
     */
 
-    console.log("[Automation] ✅ Control panel created");
-  }
+  console.log("[Automation] ✅ Control panel created");
+}
 
-  return {
-    createControlPanel: createControlPanel,
-  };
-});
+export { createControlPanel };
