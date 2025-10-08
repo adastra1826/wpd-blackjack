@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.18
+// @version      1.0.19
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -32,30 +32,6 @@
     const modules = [
         'shadow-dom.js'
     ];
-
-    const loadedModules = {};
-
-    async function loadModules(name) {
-        console.log('[AUTOMATION] Loading module:', name);
-        try {
-        const { createControlPanel } = await import(`${cdnUrl}shadow-dom.js`);
-            loadedModules[name] = createControlPanel();
-        } catch (error) {
-            console.error('[AUTOMATION] Failed to load module:', name, error);
-        }
-        console.log('[AUTOMATION] Loaded module:', name);
-    }
-
-    loadModules('shadow-dom.js').then(() => {
-        console.log('[AUTOMATION] Loaded modules:', loadedModules);
-        if (loadedModules['shadow-dom.js']) {
-            loadedModules['shadow-dom.js'].createControlPanel();
-        } else {
-            console.error('[AUTOMATION] Failed to load shadow-dom module');
-        }
-    });
-
-    /*
 
     async function loadModules(name) {
         return new Promise((resolve, reject) => {
@@ -104,7 +80,5 @@
         }
         console.log('[AUTOMATION] WPD Blackjack Automation script loaded');
     });
-
-    */
 
 })();
