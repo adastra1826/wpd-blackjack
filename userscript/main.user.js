@@ -3,7 +3,7 @@
 // @namespace    https://github.com/adastra1826
 // @updateURL    https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
 // @downloadURL  https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/main/userscript/main.user.js
-// @version      1.0.17
+// @version      1.0.18
 // @description  Automated blackjack playing with Flask backend
 // @author       Nicholas Doherty
 // @match        https://watchpeopledie.tv/casino/blackjack*
@@ -48,8 +48,8 @@
 
     loadModules('shadow-dom.js').then(() => {
         console.log('[AUTOMATION] Loaded modules:', loadedModules);
-        if (loadedModules['shadow-dom']) {
-            loadedModules['shadow-dom'].createControlPanel();
+        if (loadedModules['shadow-dom.js']) {
+            loadedModules['shadow-dom.js'].createControlPanel();
         } else {
             console.error('[AUTOMATION] Failed to load shadow-dom module');
         }
