@@ -23,7 +23,7 @@
     // Configuration
     // Pick the branch and CDN to use
     const branch = 'main';
-    const useGithub = false;
+    const useGithub = true;
 
     const ghUrl = `https://raw.githubusercontent.com/adastra1826/wpd-blackjack/refs/heads/${branch}/userscript/modules/`;
     const jsDelivrUrl = `https://cdn.jsdelivr.net/gh/adastra1826/wpd-blackjack@refs/heads/${branch}/userscript/modules/`;
